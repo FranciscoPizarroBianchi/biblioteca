@@ -36,7 +36,11 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
 )
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'applications.autor',
+    'applications.libro',
+    'applications.lector'
+)
 
 THIRD_PARTY_APPS = ()
 

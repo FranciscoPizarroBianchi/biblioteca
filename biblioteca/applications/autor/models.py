@@ -1,0 +1,23 @@
+from django.db import models
+
+# Managers
+from .managers import AutorManager
+
+# Create your models here.
+
+class Autor(models.Model):
+    nombre = models.CharField(
+        max_length=60
+    )
+    apellido = models.CharField(
+        max_length=50
+    )
+    nacionalidad = models.CharField(
+        max_length=50
+    )
+    edad = models.PositiveIntegerField()
+
+    objects = AutorManager()
+
+    def __str__(self):
+        return self.nombre + '-' + self.apellido
